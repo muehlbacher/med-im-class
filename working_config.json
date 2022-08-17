@@ -1,4 +1,6 @@
 {
+  "image_dir": "C:/Users/muehl/Desktop/UNI TEMP/UE AI Life Science/Challenge 3/images/images_train",
+  "target_file": "C:/Users/muehl/Desktop/Medical Image Classification/Data/y_train.csv",
   "results_path": "results",
   "device": "cpu",
   "learningrate": 1e-3,
