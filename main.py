@@ -211,26 +211,6 @@ def main(image_dir, target_file, results_path, network_config: dict, learningrat
         print(f"validation loss: {val_loss}", file=rf)
         print(f"      test loss: {test_loss}", file=rf)
 
-
-    for image, target in trainloader:
-        print(image.size())
-        #print(target)
-        #print(type(image))
-        #plot(image[0])
-        #plot(image[1])
-        #plot(image[2])
-        if i >= 1:
-            break
-        i+=1
-
-    # Prepare a path to plot to
-    #plotpath = os.path.join(results_path, "plots")
-    #os.makedirs(plotpath, exist_ok=True)
-
-    # Create Network
-    #net = MModel(**network_config)
-    #net.to(device)
-
 if __name__ == "__main__":
     import argparse
     import json
