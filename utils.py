@@ -54,7 +54,27 @@ def trans_classification(target):
     else:
         raise AttributeError("No Valid cell_line")
 
+def lm_classification(target):
+    labels_map = {
+        'PC-3': 0,
+        'U-251 MG':1,
+        'HeLa':2,
+        'A549':3,
+        'U-2 OS':4,
+        'MCF7':5,
+        'HEK 293':6,
+        'CACO-2':7,
+        'RT4':8
+    }
+    
+    try:    
+        return labels_map[target[1]]
+    except KeyError:
+        print(f"Key Error: Label is invalid{target}")
+
 def plot(image: tensor):
-    plt.imshow(image.permute(1, 2, 0))
+    plt.imshow(image, cmap='gray', vmin=0, vmax=255)
+    #plt.imshow(image.permute(1, 2, 0))
+    #plt.imshow(image)
     plt.show()
     pass
