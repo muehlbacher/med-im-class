@@ -24,9 +24,9 @@ The ConvNeXt is used because it had the best results in the baseline model in co
 
 ## How to run
 
-1. Clone your repository on your local system
+1. Clone repository on your local system
 2. Install relevent dependencies
-3. modify the working_config.json
+3. modify the working_config.json (correct image_dir)
 4. Run: `python main.py working_config.json`
 
 [^1]: ConvNeXt Pytorch documentation: https://pytorch.org/vision/stable/models/convnext.html
