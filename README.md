@@ -15,8 +15,19 @@ The performance of the Model is measured with balanced accuracy.
 
 ## Architecture
 
-The best performance was reached with the pretrained ConvNeXt Architecture with Base Weights. On top of the Convolutional layers there is a simple classifier stacked, a Linear Layer with Dropout and a ReLU activation function (this is not the optimal solution, you can play around to find the optimal output classifier).
+The best performance was reached with the pretrained ConvNeXt[^1][^2] Architecture with Base Weights. On top of the Convolutional layers there is a simple classifier stacked, a Linear Layer with Dropout and a ReLU activation function (this is not the optimal solution, you can play around to find the optimal output classifier).
 The pretrained CNN Layer is locked and only the classifier is trained on the images. This results in better performance at the training process.
 The ConvNeXt is used because it had the best results in the baseline model in comparison to other pretrained models (VGG16, DenseNet, AlexNet, ...). There is still room for hyperparameter tweaking to get better results. 
 
 **The architecture.py is only there to get a view on the ConvNeXt architecture, during training the torchvision.models.convnext_base(...) is used**
+
+
+## How to run
+
+1. Clone your repository on your local system
+2. Install relevent dependencies
+3. modify the working_config.json
+4. Run: `python main.py working_config.json`
+
+[^1]: ConvNeXt Pytorch documentation: https://pytorch.org/vision/stable/models/convnext.html
+[^2]: Liu, Zhuang and Mao, Hanzi and Wu, Chao-Yuan and Feichtenhofer, Christoph and Darrell, Trevor and Xie, Saining. A ConvNet for the 2020s. arXiv:2201.03545, 2022; https://arxiv.org/abs/2201.03545
